@@ -29,7 +29,15 @@ body {
             display: block !important;
         }
 
-.skills-container {
+        .tab-content-container {
+            background-color: rgba(255, 255, 255, 0.02) !important;
+            border: 2px dashed #AB92BF !important; /* Наша пунктирная линия */
+            padding: 30px !important;
+            border-radius: 16px !important;
+            margin-top: 20px !important;
+        }
+
+        .skills-container {
             display: flex !important;
             flex-wrap: wrap !important;
             gap: 10px !important;
