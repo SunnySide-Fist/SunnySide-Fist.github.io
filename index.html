@@ -137,18 +137,30 @@
     <!-- Скрипт переключения вкладок -->
     <script>
         function openTab(tabId) {
-            // Скрываем все вкладки с текстом
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
+            // 1. Скрываем все вкладки
+            var contents = document.querySelectorAll('.tab-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
 
-            // Убираем активный класс со всех кнопок
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(button => button.classList.remove('active'));
+            // 2. Убираем активный стиль со всех кнопок
+            var buttons = document.querySelectorAll('.tab-btn');
+            for (var j = 0; j < buttons.length; j++) {
+                buttons[j].classList.remove('active');
+            }
 
-            // Показываем нужную вкладку и делаем кнопку активной
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+            // 3. Показываем только ту вкладку, на которую нажали
+            document.getElementById(tabId).style.display = 'block';
+
+            // 4. Делаем кнопку активной визуально
+            var clickedButton = window.event.target;
+            clickedButton.classList.add('active');
         }
+
+        // Запускаем скрытие лишних вкладок сразу при загрузке страницы
+        window.onload = function() {
+            openTab('about');
+        };
     </script>
 
 </body>
