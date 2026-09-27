@@ -213,6 +213,21 @@
         window.onload = function() {
             openTab('about');
         };
+                function toggleAccordion(id) {
+            var body = document.getElementById(id);
+            var header = body.previousElementSibling;
+            var arrow = header.querySelector('.arrow');
+            
+            if (body.style.display === 'block') {
+                body.style.display = 'none';
+                arrow.style.transform = 'rotate(0deg)';
+                header.classList.remove('open');
+            } else {
+                body.style.display = 'block';
+                arrow.style.transform = 'rotate(180deg)';
+                header.classList.add('open');
+            }
+        }
     </script>
 
 </body>
