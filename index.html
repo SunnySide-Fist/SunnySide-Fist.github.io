@@ -33,7 +33,7 @@
 
             <div class="tab-content-container">
                 <!-- Вкладка: О себе -->
-                <div id="about" class="tab-content active">
+                <div id="about" class="tab-content active-tab">
                     <h2>О себе</h2>
                     <p>Привет! Моё имя - Дарья. Я — человек, которому искренне интересно разбираться в том, как устроены сложные системы, будь то компьютерные сети, массивы данных или визуальные интерфейсы. Мой уникальный бэкграунд объединяет строгое инженерное мышление, любовь к аналитике и профессиональный взгляд на дизайн и визуальную эстетику.По натуре я исследователь и создатель. Меня драйвит возможность автоматизировать рутину с помощью Python, внедрять ИИ в привычные процессы и превращать хаотичную информацию в аккуратный, понятный продукт. Обладаю врождённым любопытством и предельным вниманием к деталям — это помогает мне замечать скрытые баги там, где другие проходят мимо, и самостоятельно докапываться до сути сложных задач. Я не жду готовых инструкций, а умею автономно находить решения, быстро учиться и создавать новое.</p>
                 </div>
@@ -189,18 +189,23 @@
     <!-- Скрипты для работы табов и спойлеров -->
     <script>
         function openTab(tabId) {
+            // 1. Находим все вкладки и убираем у них класс видимости
             var contents = document.querySelectorAll('.tab-content');
             for (var i = 0; i < contents.length; i++) {
-                contents[i].style.display = 'none';
+                contents[i].classList.remove('active-tab');
             }
 
+            // 2. Убираем активный стиль (белый фон) со всех кнопок-переключателей
             var buttons = document.querySelectorAll('.tab-btn');
             for (var j = 0; j < buttons.length; j++) {
                 buttons[j].classList.remove('active');
             }
 
-            document.getElementById(tabId).style.display = 'block';
-            window.event.target.classList.add('active');
+            // 3. Добавляем класс видимости нужной вкладке
+            document.getElementById(tabId).classList.add('active-tab');
+            
+            // 4. Делаем нажатую кнопку активной
+            window.event.currentTarget.classList.add('active');
         }
 
         function toggleAccordion(id) {
