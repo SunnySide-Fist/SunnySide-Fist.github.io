@@ -55,49 +55,62 @@
                     </div>
                 </div>
 
-                <!-- Вкладка: Образование -->
+                                <!-- Вкладка: Образование -->
                 <div id="education" class="tab-content">
                     <h2>Моё образование</h2>
                     
-                    <div class="education-block">
-                        <h3>Основное образование</h3>
-                        <ul class="edu-list">
-                            <li>
-                                <strong>Колледж телекоммуникаций МТУСИ (КТ МТУСИ)</strong><br>
-                                <span class="edu-spec">Сетевое и системное администрирование | 3 курс (настоящее время)</span>
-                            </li>
-                            <li>
-                                <strong>ГБПОУ "Технологический колледж № 34"</strong><br>
-                                <span class="edu-spec">Художник по костюму | Среднее специальное образование (Выпуск 2024 г.)</span>
-                            </li>
-                        </ul>
+                    <!-- Спойлер 1: Основное -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion('edu-main')">
+                            <span>Основное образование</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div id="edu-main" class="accordion-body">
+                            <ul class="edu-list">
+                                <li>
+                                    <strong>Колледж телекоммуникаций МТУСИ (КТ МТУСИ)</strong><br>
+                                    <span class="edu-spec">Сетевое и системное администрирование | 3 курс (настоящее время)</span>
+                                </li>
+                                <li>
+                                    <strong>ГБПОУ "Технологический колледж № 34"</strong><br>
+                                    <span class="edu-spec">Художник по костюму | Среднее специальное образование (Выпуск 2024 г.)</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="education-block" style="margin-top: 25px;">
-                        <h3>Повышение квалификации и профильные курсы</h3>
-                        <ul class="edu-list">
-                            <li>
-                                <strong>Разработчик ИИ-чат-ботов на Python: от основ до виртуальных ассистентов</strong><br>
-                                <span class="edu-meta">АНО ДО «Школа программистов» (проект «Код будущего»), 2025</span>
-                            </li>
-                            <li>
-                                <strong>Нейросети: от теории к практике – инструменты для будущего</strong><br>
-                                <span class="edu-meta">ИОК «Техноград» (Академия «Молодёжь Москвы»), 2026</span>
-                            </li>
-                            <li>
-                                <strong>Adobe Photoshop CC. Растровая графика. Базовый уровень</strong><br>
-                                <span class="edu-meta">ИОК «Техноград» (Академия «Молодёжь Москвы»), 2026</span>
-                            </li>
-                            <li>
-                                <strong>Компьютерные сети и информационная безопасность</strong><br>
-                                <span class="edu-meta">ИОК «Техноград» (Академия «Молодёжь Москвы»), 2026</span>
-                            </li>
-                            <li>
-                                <strong>Лидер молодежной студенческой организации</strong><br>
-                                <span class="edu-meta">УИЦ Московской Федерации профсоюзов, 2025</span>
-                            </li>
-                        </ul>
+                    <!-- Спойлер 2: Курсы -->
+                    <div class="accordion-item" style="margin-top: 15px;">
+                        <button class="accordion-header" onclick="toggleAccordion('edu-courses')">
+                            <span>Повышение квалификации и профильные курсы</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div id="edu-courses" class="accordion-body">
+                            <ul class="edu-list">
+                                <li>
+                                    <strong>Разработчик ИИ-чат-ботов на Python: от основ до виртуальных ассистентов</strong><br>
+                                    <span class="edu-meta">АНО ДО «Школа программистов» (проект «Код будущего»), 2025</span>
+                                </li>
+                                <li>
+                                    <strong>Нейросети: от теории к практике – инструменты для будущего</strong><br>
+                                    <span class="edu-meta">ИОК «Техноград» (Академия «Молодёжь Москвы»), 2026</span>
+                                </li>
+                                <li>
+                                    <strong>Adobe Photoshop CC. Растровая графика. Базовый уровень</strong><br>
+                                    <span class="edu-meta">ИОК «Техноград» (Академия «Молодёжь Москвы»), 2026</span>
+                                </li>
+                                <li>
+                                    <strong>Компьютерные сети и информационная безопасность</strong><br>
+                                    <span class="edu-meta">ИОК «Техноград» (Академия «Молодёжь Москвы»), 2026</span>
+                                </li>
+                                <li>
+                                    <strong>Лидер молодежной студенческой организации</strong><br>
+                                    <span class="edu-meta">УИЦ Московской Федерации профсоюзов, 2025</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
 
         <!-- Проекты и Код -->
