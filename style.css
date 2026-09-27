@@ -229,53 +229,62 @@ footer {
     border-color: var(--card-bg);
 }
 
+/* Полностью убираем старую пунктирную рамку вокруг вкладок */
 .tab-content-container {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 2px dashed var(--accent-color);
-    padding: 30px;
-    border-radius: 16px;
-    min-height: 120px;
+    background-color: transparent;
+    border: none;
+    padding: 20px 0 0 0;
 }
 
-.tab-content {
-    display: none; /* По умолчанию скрываем все вкладки */
+/* Стили для выпадающих плашек (Аккордеон) */
+.accordion-item {
+    background-color: rgba(253, 241, 226, 0.07); /* Полупрозрачный фон цвета Linen */
+    border: 1px solid var(--accent-color);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.tab-content.active {
-    display: block; /* Показываем только активную */
-    animation: fadeIn 0.4s ease;
-}
-
-.skills-list {
+.accordion-header {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 18px 20px;
+    text-align: left;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
 }
 
-.skills-list .tech-badge {
-    background-color: var(--card-bg);
-    color: var(--text-dark);
-    font-size: 0.95rem;
-    padding: 8px 16px;
+.accordion-header:hover {
+    background-color: rgba(253, 241, 226, 0.15);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
+.accordion-header.open {
+    border-bottom: 1px dashed var(--accent-color);
+    background-color: rgba(253, 241, 226, 0.1);
 }
 
-/* Стили для красивого отображения списков образования */
-.education-block h3 {
-    font-size: 1.2rem;
-    color: var(--accent-color) !important;
-    margin-bottom: 15px;
-    border-bottom: 1px dashed rgba(101, 90, 124, 0.2);
-    padding-bottom: 5px;
+.accordion-header .arrow {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+    color: var(--accent-color);
 }
 
+.accordion-body {
+    display: none; /* По умолчанию скрыто */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Белый, читаемый текст внутри списков */
 .edu-list {
-    list-style-type: none; /* Убираем стандартные жирные точки */
+    list-style-type: none;
     padding-left: 0;
     margin: 0;
 }
@@ -283,24 +292,29 @@ footer {
 .edu-list li {
     position: relative;
     padding-left: 20px;
-    margin-bottom: 15px;
-    color: var(--text-dark);
+    margin-bottom: 18px;
+    color: var(--card-bg) !important; /* Цвет Linen — теперь текст отлично видно! */
+    font-size: 1rem;
 }
 
-/* Красивый кастомный маркер перед каждым пунктом */
+.edu-list li:last-child {
+    margin-bottom: 0;
+}
+
 .edu-list li::before {
     content: "•";
     position: absolute;
     left: 0;
-    top: 0;
-    color: var(--bg-color);
+    top: -2px;
+    color: var(--accent-color);
     font-size: 1.4rem;
-    line-height: 1;
 }
 
 .edu-spec, .edu-meta {
     font-size: 0.9rem;
-    opacity: 0.8;
+    color: #fff;
+    opacity: 0.7;
     display: inline-block;
-    margin-top: 2px;
+    margin-top: 4px;
 }
+
