@@ -182,50 +182,37 @@
         </section>
     </main>
 
-    <footer>
+     <footer>
         <p>&copy; 2026 Хайбуллина Дарья. Портфолио системного администратора.</p>
     </footer>
 
-    <!-- Скрипт переключения вкладок -->
+    <!-- Скрипты для работы табов и спойлеров -->
     <script>
         function openTab(tabId) {
-            // 1. Скрываем все вкладки
             var contents = document.querySelectorAll('.tab-content');
             for (var i = 0; i < contents.length; i++) {
                 contents[i].style.display = 'none';
             }
 
-            // 2. Убираем активный стиль со всех кнопок
             var buttons = document.querySelectorAll('.tab-btn');
             for (var j = 0; j < buttons.length; j++) {
                 buttons[j].classList.remove('active');
             }
 
-            // 3. Показываем только ту вкладку, на которую нажали
             document.getElementById(tabId).style.display = 'block';
-
-            // 4. Делаем кнопку активной визуально
-            var clickedButton = window.event.target;
-            clickedButton.classList.add('active');
+            window.event.target.classList.add('active');
         }
 
-        // Запускаем скрытие лишних вкладок сразу при загрузке страницы
-        window.onload = function() {
-            openTab('about');
-        };
-                function toggleAccordion(id) {
+        function toggleAccordion(id) {
             var body = document.getElementById(id);
-            var header = body.previousElementSibling;
-            var arrow = header.querySelector('.arrow');
+            var arrow = document.getElementById('arrow-' + id);
             
             if (body.style.display === 'block') {
                 body.style.display = 'none';
                 arrow.style.transform = 'rotate(0deg)';
-                header.classList.remove('open');
             } else {
                 body.style.display = 'block';
                 arrow.style.transform = 'rotate(180deg)';
-                header.classList.add('open');
             }
         }
     </script>
