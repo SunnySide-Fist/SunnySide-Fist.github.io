@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Хайбуллина Дарья | Сетевое администрирование & AI</title>
+    <title>Хайбуллина Дарья | IT Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,20 +12,53 @@
     <header>
         <div class="container">
             <h1>Хайбуллина Дарья</h1>
-            <p class="subtitle">Сетевое и системное администрирование | AI-энтузиаст</p>
+            <p class="subtitle">AI-энтузиаст & Веб-технологии</p>
             <div class="social-links">
-                <a href="https://github.com/SunnySide-Fist" target="_blank" class="btn">Мой GitHub</a>
-                <a href="mailto:daradzefistova@gmail.com" class="btn btn-secondary">Связаться по почте</a>
-                <a href="https://t.me/Yupiolum" target="_blank" class="btn btn-tg">Telegram</a>
+                <a href="https://github.com" target="_blank" class="btn">Мой GitHub</a>
+                <a href="https://t.me" target="_blank" class="btn btn-tg">Telegram</a>
+                <a href="mailto:ТВОЯ_ПОЧТА@example.com" class="btn btn-secondary">Почта</a>
             </div>
         </div>
     </header>
-    
+
     <main class="container">
-        <!-- О себе -->
-        <section id="about">
-            <h2>О себе</h2>
-            <p>Специализируюсь на сетевом и системном администрировании. Разрабатываю автоматизированные решения на Python, создаю кастомные интерфейсные стили (CSS) и активно изучаю интеграцию ИИ-инструментов.</p>
+        
+        <!-- Интерактивный переключатель (Табы) -->
+        <section id="interactive-bio">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="openTab('about')">О себе</button>
+                <button class="tab-btn" onclick="openTab('skills')">Мои навыки</button>
+                <button class="tab-btn" onclick="openTab('education')">Моё образование</button>
+            </div>
+
+            <div class="tab-content-container">
+                <!-- Вкладка: О себе -->
+                <div id="about" class="tab-content active">
+                    <h2>О себе</h2>
+                    <p>Специализируюсь на сетевом и системном администрировании. Разрабатываю автоматизированные решения на Python, создаю кастомные интерфейсные стили (CSS) и активно изучаю интеграцию ИИ-инструментов в рабочие процессы.</p>
+                </div>
+
+                <!-- Вкладка: Навыки -->
+                <div id="skills" class="tab-content">
+                    <h2>Мои навыки</h2>
+                    <div class="skills-list">
+                        <span class="tech-badge">Сетевое администрирование</span>
+                        <span class="tech-badge">Системное администрирование</span>
+                        <span class="tech-badge">Python (Telegram API)</span>
+                        <span class="tech-badge">Разработка CSS3 / HTML5</span>
+                        <span class="tech-badge">3D-Моделирование СКС</span>
+                        <span class="tech-badge">AI Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <!-- Вкладка: Образование -->
+                <div id="education" class="tab-content">
+                    <h2>Моё образование</h2>
+                    <p><strong>Курс «Код Будущего»</strong> — Разработка программных решений и программирование.</p>
+                    <p><strong>Учебный комплекс «Техноград»</strong> — Специализированные курсы по компьютерным сетям, искусственному интеллекту и графическому дизайну.</p>
+                    <p><strong>Национальный интуит-университет</strong> — Сертифицированные программы обучения (РУС/ENG).</p>
+                </div>
+            </div>
         </section>
 
         <!-- Проекты и Код -->
@@ -57,67 +90,42 @@
             </div>
         </section>
 
-        <!-- Галерея сертификатов с прокруткой -->
+        <!-- Галерея сертификатов -->
         <section id="certificates">
             <h2>Документы и сертификаты (Листайте вбок →)</h2>
             <div class="slider-container">
-                
                 <div class="slide-item">
-                    <a href="certs/code_future.jpg" target="_blank">
-                        <img src="certs/code_future.jpg" alt="Курс Код Будущего">
-                    </a>
+                    <a href="certs/code_future.jpg" target="_blank"><img src="certs/code_future.jpg" alt="Курс Код Будущего"></a>
                     <p>Курс «Код Будущего»</p>
                 </div>
-
                 <div class="slide-item">
-                    <a href="certs/technograd_computer_networks.jpg" target="_blank">
-                        <img src="certs/technograd_computer_networks.jpg" alt="Техноград Компьютерные сети">
-                    </a>
-                    <p>Техноград: Компьютерные сети</p>
+                    <a href="certs/technograd_computer_networks.jpg" target="_blank"><img src="certs/technograd_computer_networks.jpg" alt="Техноград Компьютерные сети"></a>
+                    <p>Техноград: Сети</p>
                 </div>
-
                 <div class="slide-item">
-                    <a href="certs/technograd_ai.jpg" target="_blank">
-                        <img src="certs/technograd_ai.jpg" alt="Техноград ИИ">
-                    </a>
-                    <p>Техноград: Искусственный интеллект</p>
+                    <a href="certs/technograd_ai.jpg" target="_blank"><img src="certs/technograd_ai.jpg" alt="Техноград ИИ"></a>
+                    <p>Техноград: ИИ</p>
                 </div>
-
                 <div class="slide-item">
-                    <a href="certs/technograd_Adobe_Photoshop_CC.jpg" target="_blank">
-                        <img src="certs/technograd_Adobe_Photoshop_CC.jpg" alt="Техноград Photoshop">
-                    </a>
-                    <p>Техноград: Adobe Photoshop CC</p>
+                    <a href="certs/technograd_Adobe_Photoshop_CC.jpg" target="_blank"><img src="certs/technograd_Adobe_Photoshop_CC.jpg" alt="Техноград Photoshop"></a>
+                    <p>Техноград: Photoshop</p>
                 </div>
-
                 <div class="slide-item">
-                    <a href="certs/INTUIT_Certificate.jpg" target="_blank">
-                        <img src="certs/INTUIT_Certificate.jpg" alt="Сертификат ИНТУИТ">
-                    </a>
-                    <p>Сертификат ИНТУИТ (РУС)</p>
+                    <a href="certs/INTUIT_Certificate.jpg" target="_blank"><img src="certs/INTUIT_Certificate.jpg" alt="Сертификат ИНТУИТ"></a>
+                    <p>ИНТУИТ (РУС)</p>
                 </div>
-
                 <div class="slide-item">
-                    <a href="certs/INTUIT_Certificate_ENG.jpg" target="_blank">
-                        <img src="certs/INTUIT_Certificate_ENG.jpg" alt="Сертификат ИНТУИТ ENG">
-                    </a>
-                    <p>Сертификат ИНТУИТ (ENG)</p>
+                    <a href="certs/INTUIT_Certificate_ENG.jpg" target="_blank"><img src="certs/INTUIT_Certificate_ENG.jpg" alt="Сертификат ИНТУИТ ENG"></a>
+                    <p>ИНТУИТ (ENG)</p>
                 </div>
-
                 <div class="slide-item">
-                    <a href="certs/interregional_conference_diploma.jpg" target="_blank">
-                        <img src="certs/interregional_conference_diploma.jpg" alt="Диплом конференции">
-                    </a>
+                    <a href="certs/interregional_conference_diploma.jpg" target="_blank"><img src="certs/interregional_conference_diploma.jpg" alt="Диплом конференции"></a>
                     <p>Диплом конференции</p>
                 </div>
-
                 <div class="slide-item">
-                    <a href="certs/scientific_and_practical_conference_Computer_Graphics_and_Design.jpg" target="_blank">
-                        <img src="certs/scientific_and_practical_conference_Computer_Graphics_and_Design.jpg" alt="Научно-практическая конференция">
-                    </a>
-                    <p>Научно-практическая конференция</p>
+                    <a href="certs/scientific_and_practical_conference_Computer_Graphics_and_Design.jpg" target="_blank"><img src="certs/scientific_and_practical_conference_Computer_Graphics_and_Design.jpg" alt="Научно-практическая конференция"></a>
+                    <p>Конференция: Графика</p>
                 </div>
-
             </div>
         </section>
     </main>
@@ -125,6 +133,23 @@
     <footer>
         <p>&copy; 2026 Хайбуллина Дарья. Портфолио системного администратора.</p>
     </footer>
+
+    <!-- Скрипт переключения вкладок -->
+    <script>
+        function openTab(tabId) {
+            // Скрываем все вкладки с текстом
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Убираем активный класс со всех кнопок
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Показываем нужную вкладку и делаем кнопку активной
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
