@@ -20,6 +20,15 @@ body {
     line-height: 1.6;
 }
 
+        /* Жестко скрываем все вкладки по умолчанию */
+        .tab-content {
+            display: none !important;
+        }
+        /* Показываем только ту, у которой есть класс active-tab */
+        .tab-content.active-tab {
+            display: block !important;
+        }
+
 .skills-container {
             display: flex !important;
             flex-wrap: wrap !important;
