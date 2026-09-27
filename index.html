@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Хайбуллина Дарья | Системное администрирование & AI</title>
+    <title>Хайбуллина Дарья | Сетевое администрирование & AI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Шапка (Профиль) -->
+    <!-- Шапка профиля -->
     <header>
         <div class="container">
             <h1>Хайбуллина Дарья</h1>
@@ -21,53 +21,86 @@
     </header>
 
     <main class="container">
-        <!-- Блок: О себе -->
+        <!-- О себе -->
         <section id="about">
             <h2>О себе</h2>
-            <p>Специализируюсь на сетевом и системном администрировании. Увлекаюсь интеграцией ИИ-инструментов, веб-технологиями (CSS/HTML) и разработкой автоматизированных решений (Telegram-боты). Обладаю развитым визуальным мышлением, умею структурировать сложные технические данные.</p>
+            <p>Специализируюсь на сетевом и системном администрировании. Разрабатываю автоматизированные решения на Python, создаю кастомные интерфейсные стили (CSS) и активно изучаю интеграцию ИИ-инструментов.</p>
         </section>
 
-        <!-- Блок: Ключевые проекты -->
+        <!-- Проекты и Код -->
         <section id="projects">
-            <h2>Ключевые проекты</h2>
+            <h2>Проекты и исходный код</h2>
             <div class="grid">
-                <!-- Проект 1 -->
+                <!-- Telegram-бот -->
                 <div class="card">
-                    <h3>3D-моделирование кабельных систем</h3>
-                    <p>Разработала масштабный 50-страничный проект по проектированию и трехмерному моделированию структурированных кабельных систем (СКС).</p>
-                    <span class="tech-badge">СКС</span> <span class="tech-badge">3D-Моделирование</span>
+                    <h3>Разработка Telegram-бота</h3>
+                    <p>Создание и поддержка скриптов автоматизации. Исходный код бота доступен для аудита в репозитории.</p>
+                    <a href="bot.py" target="_blank" class="project-link">Посмотреть bot.py →</a>
+                    <br><br>
+                    <span class="tech-badge">Python</span> <span class="tech-badge">Telegram API</span>
                 </div>
-                <!-- Проект 2 -->
+                <!-- Janitor AI CSS -->
                 <div class="card">
-                    <h3>Telegram-бот & Кастомные стили</h3>
-                    <p>Создала и настроила функционального Telegram-бота. Также разработала кастомные CSS-стили оформления для платформы Janitor AI.</p>
-                    <div style="margin-top: 15px;">
-                        <a href="https://github.com" target="_blank" class="project-link" style="margin-right: 15px;">Код бота →</a>
-                        <a href="janitor.css" target="_blank" class="project-link">Посмотреть janitor.css →</a>
-                    </div>
-                    <br>
-                    <span class="tech-badge">Python</span> <span class="tech-badge">CSS</span> <span class="tech-badge">UI Design</span>
+                    <h3>Кастомные стили для Janitor AI</h3>
+                    <p>Разработка интерфейсных стилей оформления (кастомный скин CSS) для платформы Janitor AI, улучшающих визуальное восприятие веб-страниц.</p>
+                    <a href="janitor.css" target="_blank" class="project-link">Посмотреть janitor.css →</a>
+                    <br><br>
+                    <span class="tech-badge">CSS3</span> <span class="tech-badge">UI/UX</span>
+                </div>
+                <!-- 3D СКС -->
+                <div class="card" style="grid-column: span 2;">
+                    <h3>3D-моделирование кабельных систем</h3>
+                    <p>Масштабный 50-страничный проект по проектированию и трехмерному моделированию структурированных кабельных систем (СКС).</p>
+                    <span class="tech-badge">СКС</span> <span class="tech-badge">3D-Моделирование</span> <span class="tech-badge">Проектирование</span>
                 </div>
             </div>
         </section>
 
-        <!-- Блок: Сертификаты и Образование -->
+        <!-- Галерея сертификатов с прокруткой -->
         <section id="certificates">
-            <h2>Образование и сертификаты</h2>
-            <div class="grid-certs">
-                <!-- Сюда добавляем твои документы -->
-                <div class="cert-item">
-                    <h4>Курсы «Код Будущего» / Школа программистов</h4>
-                    <a href="certs/code_future.jpg" target="_blank" class="cert-link">Открыть сертификат ↗</a>
+            <h2>Документы и сертификаты (Листайте вбок →)</h2>
+            <div class="slider-container">
+                
+                <div class="slide-item">
+                    <img src="code_future.jpg" alt="Код Будущего">
+                    <p>Курс «Код Будущего»</p>
                 </div>
-                <div class="cert-item">
-                    <h4>Техноград</h4>
-                    <a href="certs/technograd.jpg" target="_blank" class="cert-link">Открыть сертификат ↗</a>
+
+                <div class="slide-item">
+                    <img src="technograd_computer_networks.jpg" alt="Техноград Компьютерные сети">
+                    <p>Техноград: Компьютерные сети</p>
                 </div>
-                <div class="cert-item">
-                    <h4>Профсоюзы</h4>
-                    <a href="certs/profsoyuzy.jpg" target="_blank" class="cert-link">Открыть сертификат ↗</a>
+
+                <div class="slide-item">
+                    <img src="technograd_ai.jpg" alt="Техноград ИИ">
+                    <p>Техноград: Искусственный интеллект</p>
                 </div>
+
+                <div class="slide-item">
+                    <img src="technograd_Adobe_Photoshop_CC.jpg" alt="Техноград Photoshop">
+                    <p>Техноград: Adobe Photoshop CC</p>
+                </div>
+
+                <div class="slide-item">
+                    <img src="INTUIT_Certificate.jpg" alt="Сертификат ИНТУИТ">
+                    <p>Сертификат ИНТУИТ (РУС)</p>
+                </div>
+
+                <div class="slide-item">
+                    <img src="INTUIT_Certificate_ENG.jpg" alt="Сертификат ИНТУИТ ENG">
+                    <p>Сертификат ИНТУИТ (ENG)</p>
+                </div>
+
+                <div class="slide-item">
+                    <img src="Interregional_conference_diploma.jpg" alt="Диплом конференции">
+                    <p>Диплом межрегиональной конференции</p>
+                </div>
+
+                <div class="slide-item">
+                    <img src="scientific_and_practical_conference_Comput...jpg" alt="Научно-практическая конференция">
+                    <p>Научно-практическая конференция</p>
+                </div>
+
             </div>
         </section>
     </main>
