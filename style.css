@@ -264,3 +264,43 @@ footer {
     from { opacity: 0; transform: translateY(5px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* Стили для красивого отображения списков образования */
+.education-block h3 {
+    font-size: 1.2rem;
+    color: var(--accent-color) !important;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed rgba(101, 90, 124, 0.2);
+    padding-bottom: 5px;
+}
+
+.edu-list {
+    list-style-type: none; /* Убираем стандартные жирные точки */
+    padding-left: 0;
+    margin: 0;
+}
+
+.edu-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+/* Красивый кастомный маркер перед каждым пунктом */
+.edu-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--bg-color);
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.edu-spec, .edu-meta {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    display: inline-block;
+    margin-top: 2px;
+}
